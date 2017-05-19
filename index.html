@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        ul,li{
+            list-style: none;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .i-select{
+            height: 45px;
+            width: 100%;
+            border: 1px solid #ccc;
+            line-height: 45px;
+            text-indent: 10px;
+        }
+
+        .i-select:active,.active{
+            border-color: #0bcbf2;
+        }
+
+        .selected{
+            cursor: pointer;
+        }
+        .i-select ul[options]{
+            display: none;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+        }
+        .i-select li[option]{
+            cursor: default;
+            border-bottom: 1px solid #ccc;
+        }
+        .i-select li[option]:hover{
+            background: #3561e6;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<div class="i-select sel1 sda">
+    <p class="selected">请选择信息</p>
+    <ul options>
+        <li option>信息1</li>
+        <li option>信息2</li>
+        <li option>信息3</li>
+        <li option>信息4</li>
+        <li option>信息5</li>
+    </ul>
+</div>
+<!--引用webpack编译的es6文件-->
+<script src="build/ES6toES5.js"></script>
+</body>
+</html>
